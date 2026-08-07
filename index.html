@@ -2,248 +2,72 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#19364d">
+  <meta name="theme-color" content="#19364D">
   <title>FP山下｜サイト準備中</title>
-  <meta name="description" content="FP山下の公式サイトは現在準備中です。">
-  <style>
-    :root {
-      color-scheme: light;
-      --paper: #f4f5f3;
-      --ink: #19364d;
-      --text: #30363d;
-      --muted: #6f777d;
-      --accent: #d27643;
-      --line: #d9dedf;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      min-width: 320px;
-      background: var(--paper);
-    }
-
-    body {
-      margin: 0;
-      min-height: 100svh;
-      color: var(--text);
-      background:
-        radial-gradient(circle at 82% 18%, rgba(210, 118, 67, 0.12), transparent 24rem),
-        linear-gradient(135deg, rgba(255, 255, 255, 0.66), transparent 48%),
-        var(--paper);
-      font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
-    }
-
-    .page {
-      position: relative;
-      display: grid;
-      grid-template-rows: auto 1fr auto;
-      min-height: 100svh;
-      overflow: hidden;
-    }
-
-    .page::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: clamp(1.25rem, 6vw, 6rem);
-      width: 1px;
-      height: 100%;
-      background: var(--line);
-      pointer-events: none;
-    }
-
-    .header,
-    .main,
-    .footer {
-      width: min(100% - 2.5rem, 72rem);
-      margin-inline: auto;
-    }
-
-    .header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      min-height: 5.5rem;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .brand {
-      color: var(--ink);
-      font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
-      font-size: 1.15rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-    }
-
-    .status {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.55rem;
-      color: var(--muted);
-      font-size: 0.72rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .status::before {
-      content: "";
-      width: 0.5rem;
-      height: 0.5rem;
-      border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 0 0.3rem rgba(210, 118, 67, 0.13);
-    }
-
-    .main {
-      display: grid;
-      align-items: center;
-      padding-block: clamp(4rem, 11vw, 8rem);
-    }
-
-    .content {
-      position: relative;
-      max-width: 52rem;
-    }
-
-    .index {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-      margin: 0 0 1.75rem;
-      color: var(--accent);
-      font-size: 0.75rem;
-      letter-spacing: 0.18em;
-    }
-
-    .index::after {
-      content: "";
-      width: 4rem;
-      height: 1px;
-      background: currentColor;
-    }
-
-    h1 {
-      margin: 0;
-      color: var(--ink);
-      font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
-      font-size: clamp(3rem, 8vw, 7rem);
-      font-weight: 500;
-      line-height: 1.14;
-      letter-spacing: -0.045em;
-      word-break: auto-phrase;
-      text-wrap: balance;
-    }
-
-    .lead {
-      max-width: 35rem;
-      margin: 2rem 0 0;
-      padding-left: 1.2rem;
-      border-left: 3px solid var(--accent);
-      font-size: clamp(1rem, 2vw, 1.15rem);
-      line-height: 1.9;
-      word-break: auto-phrase;
-    }
-
-    .note {
-      margin: 1rem 0 0 1.4rem;
-      color: var(--muted);
-      font-size: 0.86rem;
-      line-height: 1.8;
-    }
-
-    .footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      min-height: 5rem;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 0.72rem;
-      letter-spacing: 0.08em;
-    }
-
-    @media (max-width: 42rem) {
-      .header,
-      .main,
-      .footer {
-        width: min(100% - 2rem, 72rem);
-      }
-
-      .page::before {
-        left: 1rem;
-      }
-
-      .header {
-        min-height: 4.75rem;
-      }
-
-      .status span {
-        display: none;
-      }
-
-      .main {
-        padding-block: 4.5rem;
-      }
-
-      h1 {
-        font-size: clamp(2.8rem, 15vw, 4.6rem);
-      }
-
-      .lead {
-        margin-top: 1.75rem;
-      }
-
-      .footer {
-        align-items: flex-start;
-        flex-direction: column;
-        justify-content: center;
-        gap: 0.4rem;
-      }
-    }
-
-    @media (prefers-reduced-motion: no-preference) {
-      .content {
-        animation: reveal 0.7s ease-out both;
-      }
-
-      @keyframes reveal {
-        from {
-          opacity: 0;
-          transform: translateY(1rem);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-    }
-  </style>
+  <meta name="description" content="FP山下の公式サイトは現在準備中です。健康経営申請サポートのページを先行公開しています。">
+  <link rel="stylesheet" href="assets/css/_shared.css">
 </head>
-<body>
-  <div class="page">
-    <header class="header">
-      <div class="brand">FP山下</div>
-      <div class="status" aria-label="サイト準備中"><span>Site in preparation</span></div>
-    </header>
+<body class="home-page">
+  <a class="skip-link" href="#main">本文へ移動</a>
 
-    <main class="main">
-      <section class="content" aria-labelledby="page-title">
-        <p class="index">COMING SOON</p>
-        <h1 id="page-title">お金の話を、<br>売る前に。</h1>
-        <p class="lead">FP山下の公式サイトは、現在公開に向けて準備を進めています。</p>
-        <p class="note">FP相談と健康経営申請サポートについて、料金と内容を分かりやすくお伝えするサイトを制作中です。</p>
-      </section>
-    </main>
+  <!-- ZOROYA:HEADER -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-brand" href="index.html" aria-label="FP山下 トップページ">
+        <span class="site-brand__name">FP山下</span>
+        <span class="site-brand__en">FP YAMASHITA</span>
+      </a>
+      <button class="site-menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+        <span class="sr-only">メニューを開く</span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="メインメニュー">
+        <a href="index.html" aria-current="page">トップ</a>
+        <a href="health-management.html">健康経営</a>
+      </nav>
+    </div>
+  </header>
+  <!-- /ZOROYA:HEADER -->
 
-    <footer class="footer">
-      <span>FP山下</span>
-      <span>&copy; 2026 FP Yamashita</span>
-    </footer>
-  </div>
+  <!-- ZOROYA:MAIN -->
+  <main id="main" class="home-main">
+    <section class="home-hero" aria-labelledby="home-title">
+      <div class="home-hero__content">
+        <p class="section-label">COMING SOON</p>
+        <h1 id="home-title">お金の話を、<br>売る前に。</h1>
+        <p class="home-hero__lead">FP山下の公式サイトは、現在公開に向けて準備を進めています。</p>
+        <p class="home-hero__note">FP相談と健康経営申請サポートについて、料金と内容を分かりやすくお伝えするサイトを制作中です。</p>
+        <div class="home-hero__actions">
+          <a class="button button--primary" href="health-management.html">健康経営ページを見る <span aria-hidden="true">→</span></a>
+          <span class="home-hero__progress">ほかのページも順次公開します</span>
+        </div>
+      </div>
+      <div class="home-hero__mark" aria-hidden="true">
+        <span>料金と役割を</span>
+        <strong>先に。</strong>
+      </div>
+    </section>
+  </main>
+  <!-- /ZOROYA:MAIN -->
+
+  <!-- ZOROYA:FOOTER -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div>
+        <div class="site-footer__brand">FP山下</div>
+        <p>個人向けFP相談と健康経営優良法人の申請支援</p>
+      </div>
+      <nav class="site-footer__nav" aria-label="フッターメニュー">
+        <a href="index.html">トップ</a>
+        <a href="health-management.html">健康経営</a>
+      </nav>
+    </div>
+    <div class="site-footer__bottom">&copy; 2026 FP Yamashita</div>
+  </footer>
+  <!-- /ZOROYA:FOOTER -->
+
+  <script src="assets/js/app.js" defer></script>
 </body>
 </html>
