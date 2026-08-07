@@ -1,0 +1,15 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Local generation and review artifacts
+_review/
+_aio-check/
+*.log
+
+# Dependencies and OS files
+node_modules/
+__pycache__/
+.DS_Store
+Thumbs.db
