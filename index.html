@@ -2,74 +2,89 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#19364D">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%2319364D'/%3E%3Ccircle cx='46' cy='18' r='7' fill='%23D27643'/%3E%3C/svg%3E">
-  <title>FP山下｜サイト準備中</title>
-  <meta name="description" content="FP山下の公式サイトは現在準備中です。健康経営申請サポートのページを先行公開しています。">
-  <!-- Source design system: assets/css/_shared.css -->
-  <link rel="stylesheet" href="assets/css/shared.css">
+  <meta name="theme-color" content="#F3F4F1">
+  <title>FP山下｜健康経営と個人のお金の相談</title>
+  <meta name="description" content="FP山下のホームページ。自己紹介、健康経営、FP相談の3つの入口から、知りたい内容を選べます。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FP山下">
+  <meta property="og:description" content="健康経営と、個人のお金の相談。">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%231B1D1C'/%3E%3Ccircle cx='46' cy='18' r='7' fill='%23C5663F'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/css/home.css">
 </head>
-<body class="home-page">
+<body>
   <a class="skip-link" href="#main">本文へ移動</a>
 
-  <!-- ZOROYA:HEADER -->
-  <header class="site-header">
-    <div class="site-header__inner">
-      <a class="site-brand" href="index.html" aria-label="FP山下 トップページ">
-        <span class="site-brand__name">FP山下</span>
-        <span class="site-brand__en">FP YAMASHITA</span>
+  <div class="site-shell">
+    <!-- ZOROYA:HEADER -->
+    <header class="c-header">
+      <a class="c-header__brand" href="index.html" aria-label="FP山下 トップページ">
+        <span>FP YAMASHITA</span>
       </a>
-      <button class="site-menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-        <span></span><span></span><span></span>
-        <span class="sr-only">メニューを開く</span>
-      </button>
-      <nav id="site-nav" class="site-nav" aria-label="メインメニュー">
-        <a href="index.html" aria-current="page">トップ</a>
-        <a href="health-management.html">健康経営</a>
-      </nav>
-    </div>
-  </header>
-  <!-- /ZOROYA:HEADER -->
+      <p class="c-header__count" aria-hidden="true">INDEX / 03</p>
+    </header>
+    <!-- /ZOROYA:HEADER -->
 
-  <!-- ZOROYA:MAIN -->
-  <main id="main" class="home-main">
-    <section class="home-hero" aria-labelledby="home-title">
-      <div class="home-hero__content">
-        <p class="section-label">COMING SOON</p>
-        <h1 id="home-title">お金の話を、<br>売る前に。</h1>
-        <p class="home-hero__lead">FP山下の公式サイトは、現在公開に向けて準備を進めています。</p>
-        <p class="home-hero__note">FP相談と健康経営申請サポートについて、料金と内容を分かりやすくお伝えするサイトを制作中です。</p>
-        <div class="home-hero__actions">
-          <a class="button button--primary" href="health-management.html">健康経営ページを見る <span aria-hidden="true">→</span></a>
-          <span class="home-hero__progress">ほかのページも順次公開します</span>
+    <!-- ZOROYA:MAIN -->
+    <main id="main" class="c-home">
+      <section class="c-home__intro" aria-labelledby="page-title">
+        <div class="c-home__intro-inner">
+          <p class="c-home__eyebrow">FINANCIAL PLANNER</p>
+          <h1 id="page-title">FP 山下</h1>
+          <p class="c-home__lead">健康経営と、<br>個人のお金の相談。</p>
         </div>
-      </div>
-      <div class="home-hero__mark" aria-hidden="true">
-        <span>料金と役割を</span>
-        <strong>先に。</strong>
-      </div>
-    </section>
-  </main>
-  <!-- /ZOROYA:MAIN -->
+        <span class="c-home__dot" aria-hidden="true"></span>
+      </section>
 
-  <!-- ZOROYA:FOOTER -->
-  <footer class="site-footer">
-    <div class="site-footer__inner">
-      <div>
-        <div class="site-footer__brand">FP山下</div>
-        <p>個人向けFP相談と健康経営優良法人の申請支援</p>
-      </div>
-      <nav class="site-footer__nav" aria-label="フッターメニュー">
-        <a href="index.html">トップ</a>
-        <a href="health-management.html">健康経営</a>
+      <nav class="c-index" aria-label="知りたい内容を選ぶ">
+        <div class="c-index__heading">
+          <p>INDEX</p>
+          <p>知りたいところへ。</p>
+        </div>
+
+        <div class="c-index__list">
+          <a class="c-index__item is-pending" href="#site-status" data-pending="自己紹介">
+            <span class="c-index__number">01</span>
+            <span class="c-index__name">
+              <strong>自己紹介</strong>
+              <small>PROFILE</small>
+            </span>
+            <span class="c-index__state">準備中</span>
+          </a>
+
+          <a class="c-index__item is-live" href="health-management.html">
+            <span class="c-index__number">02</span>
+            <span class="c-index__name">
+              <strong>健康経営</strong>
+              <small>HEALTH MANAGEMENT</small>
+            </span>
+            <span class="c-index__arrow" aria-hidden="true">&#8599;</span>
+          </a>
+
+          <a class="c-index__item is-pending" href="#site-status" data-pending="FP相談">
+            <span class="c-index__number">03</span>
+            <span class="c-index__name">
+              <strong>FP相談</strong>
+              <small>FP CONSULTING</small>
+            </span>
+            <span class="c-index__state">準備中</span>
+          </a>
+        </div>
       </nav>
-    </div>
-    <div class="site-footer__bottom">&copy; 2026 FP Yamashita</div>
-  </footer>
-  <!-- /ZOROYA:FOOTER -->
 
-  <script src="assets/js/app.js" defer></script>
+      <p id="site-status" class="c-home__status" role="status" aria-live="polite"></p>
+    </main>
+    <!-- /ZOROYA:MAIN -->
+
+    <!-- ZOROYA:FOOTER -->
+    <footer class="c-footer">
+      <p>&copy; <span data-year>2026</span> FP YAMASHITA</p>
+      <p>TOP PAGE / 01</p>
+    </footer>
+    <!-- /ZOROYA:FOOTER -->
+  </div>
+
+  <script src="assets/js/home.js" defer></script>
 </body>
 </html>
